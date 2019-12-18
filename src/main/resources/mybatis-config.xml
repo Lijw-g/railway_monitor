@@ -10,13 +10,13 @@
     </settings>
 
     <typeAliases>
-        <typeAlias type="com.subway.monitor.model.MonitorData" alias="monitorData"/>
-        <typeAlias type="com.subway.monitor.model.HeartData" alias="heartData"/>
-        <typeAlias type="com.subway.monitor.model.GeographicalData" alias="geographicalData"/>
+        <typeAlias type="com.railway.monitor.model.MonitorData" alias="monitorData"/>
+        <typeAlias type="com.railway.monitor.model.HeartData" alias="heartData"/>
+        <typeAlias type="com.railway.monitor.model.GeographicalData" alias="geographicalData"/>
     </typeAliases>
 
     <typeHandlers>
         <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
-                     javaType="com.subway.monitor.service.log.LogType"/>
+                     javaType="com.railway.monitor.service.log.LogType"/>
     </typeHandlers>
 </configuration>
