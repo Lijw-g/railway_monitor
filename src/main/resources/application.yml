@@ -30,7 +30,7 @@ spring:
     url: jdbc:mysql://47.92.211.92:3306/railwayData
     username: root
     password: Yangguang52199!
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   config-location: classpath:mybatis-config.xml
