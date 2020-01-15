@@ -43,7 +43,8 @@ public class GeographicalDataService extends AbstractService {
             geographicalData.setDate("0")
                     .setDirection("0")
                     .setSign("0")
-                    .setTime("");
+                    .setTime("0")
+                    .setSpeed("0");
             sqlSession.insert("geographicalData.insert", geographicalData);
         } catch (IOException e) {
             e.printStackTrace();
