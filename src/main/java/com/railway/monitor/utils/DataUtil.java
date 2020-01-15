@@ -49,4 +49,13 @@ public class DataUtil {
         stringBuilder.append(low);
         return Integer.valueOf(stringBuilder.toString());
     }
+
+    public static String getData(String sizeStrinng) {
+        int hight = Integer.parseInt(sizeStrinng.substring(2, 4), 16);
+        int low = Integer.parseInt(sizeStrinng.substring(0, 2), 16);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(hight);
+        stringBuilder.append(low);
+        return stringBuilder.toString();
+    }
 }

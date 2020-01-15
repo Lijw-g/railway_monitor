@@ -1,6 +1,7 @@
 package com.railway.monitor.kafka;
 
 import com.railway.monitor.model.MonitorData;
+import com.railway.monitor.service.GeographicalDataService;
 import com.railway.monitor.service.MonitorDataService;
 import com.railway.monitor.utils.DataUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -26,6 +27,8 @@ public class CoreDataConsumer {
     private Logger logger = LoggerFactory.getLogger(CoreDataConsumer.class);
     @Autowired
     private MonitorDataService monitorDataService;
+    @Autowired
+    private GeographicalDataService geographicalDataService;
 
     /**
      * 监听kafka.tut 的topic，不做其他业务
@@ -45,7 +48,10 @@ public class CoreDataConsumer {
             String datas = data.substring(26, 84);
             //处理传输的数据
             Integer type = Integer.parseInt(datas.substring(0, 2));
+            //地理位置信息
             String JZ_data = datas.substring(2, 18);
+            //插入地理位置
+            geographicalDataService.getGeo(JZ_data);
             String M_Vstate = getStatusValue(datas.substring(18, 24));
             String M_Astate = getStatusValue(datas.substring(24, 30));
             String M_Tstate = getStatusValue(datas.substring(30, 36));

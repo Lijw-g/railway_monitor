@@ -1,7 +1,9 @@
 package com.railway.monitor.kafka;
 
+import com.google.common.collect.Maps;
 import com.railway.monitor.model.GeographicalData;
 import com.railway.monitor.service.GeographicalDataService;
+import com.railway.monitor.utils.HttpUtils;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +13,9 @@ import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.Map;
 import java.util.Optional;
 
 /**
