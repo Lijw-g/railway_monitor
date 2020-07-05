@@ -2,7 +2,7 @@ spring:
   application:
     name: railway-monitor
   kafka:
-    # 指定kafka 代理地址，可以多个
+    # 指定kafka 代理地址，可以多个（根据实际情况修改对应的ip）
     bootstrap-servers: 47.92.211.92:9092
     producer:
       retries: 0
@@ -27,6 +27,7 @@ spring:
       concurrency: 3
   datasource:
     name: railwayData
+    #根据实际情况修改对应的ip和用户名密码
     url: jdbc:mysql://47.92.211.92:3306/railwayData
     username: root
     password: Yangguang52199!
